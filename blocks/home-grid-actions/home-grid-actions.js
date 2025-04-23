@@ -4,10 +4,10 @@ export default function decorate(block) {
   block.classList.add('home-grid-actions');
 
   /* change to ul, li */
-  const ul = document.createElement('ul');
+  const ul = block.createElement('ul');
   ul.className("type-actions");
   [...block.children].forEach((row) => {
-    const li = document.createElement('li');
+    const li = block.createElement('li');
     while (row.firstElementChild) li.append(row.firstElementChild);
     ul.append(li);
   });
