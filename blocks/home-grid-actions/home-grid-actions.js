@@ -47,7 +47,7 @@ export default function decorate(block) {
 
   // setup image columns
   [...block.children].forEach((row) => {
-    console.log("Test" + row[i]);
+    console.log("Test Nuovo");
     const item = document.createElement('li');
     const text = document.createTextNode('list item content');
     item.appendChild(text);
