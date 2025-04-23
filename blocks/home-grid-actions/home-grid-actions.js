@@ -8,7 +8,6 @@ export default function decorate(block) {
   ul.className("type-actions");
   [...block.children].forEach((row) => {
     const li = document.createElement('li');
-    moveInstrumentation(row, li);
     while (row.firstElementChild) li.append(row.firstElementChild);
     ul.append(li);
   });
