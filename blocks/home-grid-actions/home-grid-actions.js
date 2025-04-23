@@ -44,22 +44,20 @@ export default function decorate(block) {
   const cols = [...block.firstElementChild.children];
   block.classList.add('home-grid-actions');
 
+
   // setup image columns
   [...block.children].forEach((row) => {
 
-    const ul = document.createElement('ul');
-    ul.classList.add('type-links');
-
-
-    [...row.children].forEach((col) => {
-      const li = document.createElement('li');
-      li.appendChild("text");
-    });
-
-    container.appendChild(ul);
-
+    var item = document.createElement('li');
+    var text = document.createTextNode('list item content');
+    item.appendChild(text);
 
   });
+
+  const ul = document.createElement('ul');
+  ul.classList.add('type-links');
+  ul.appendChild(item);
+  block.appendChild(ul);
 }
 
 /*
