@@ -1,4 +1,4 @@
-/*EDS.registerComponent('home-grid-actions', {
+EDS.registerComponent('home-grid-actions', {
   init: function (element) {
     const table = element.querySelector('table');
     if (!table) return;
@@ -38,22 +38,3 @@
     table.replaceWith(container);
   }
 });
-*/
-
-export default function decorate(block) {
-  const cols = [...block.firstElementChild.children];
-  block.classList.add('home-grid-actions');
-
-
-  const ul = document.createElement('ul').classList.add('type-links');
-  const item = document.createElement('li');
-  const link = document.createElement('a');
-  const strong = document.createElement('strong');
-  const em = document.createElement('em');
-  const span = document.createElement('span');
-  const text = 'Esempio';
-    ul.appendChild(item);
-    block.appendChild(ul);
-
-
-}
