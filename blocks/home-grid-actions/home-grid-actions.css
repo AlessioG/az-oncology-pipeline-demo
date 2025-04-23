@@ -1,0 +1,46 @@
+.home-grid-actions {
+    margin: 2rem 0;
+  }
+  
+  .home-grid-actions .type-links {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .home-grid-actions .type-links li {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .home-grid-actions .type-links li:hover {
+    background: #e0e0e0;
+  }
+  
+  .home-grid-actions .type-links a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .home-grid-actions .type-links strong {
+    font-weight: 600;
+  }
+  
+  .home-grid-actions .type-links em.az-icon.icon-nav-arrow {
+    margin-left: 0.5rem;
+    font-style: normal;
+    background-image: url('/assets/icons/arrow-right.svg'); /* o il tuo sprite */
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+  }
+  
