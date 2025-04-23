@@ -44,12 +44,12 @@ export default function decorate(block) {
   const cols = [...block.firstElementChild.children];
   block.classList.add('home-grid-actions');
 
-  const ul = document.createElement('ul');
-  ul.classList.add('type-links');
+
+  const ul = document.createElement('ul').classList.add('type-links');
 
   // setup image columns
   [...block.children].forEach((row) => {
-    console.log("Test Nuovo");
+    console.log("Test News");
     const item = document.createElement('li');
     const text = document.createTextNode('list item content');
     item.appendChild(text);
