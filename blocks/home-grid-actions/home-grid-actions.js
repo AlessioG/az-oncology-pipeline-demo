@@ -1,4 +1,4 @@
-EDS.registerComponent('home-grid-actions', {
+/*EDS.registerComponent('home-grid-actions', {
   init: function (element) {
     const table = element.querySelector('table');
     if (!table) return;
@@ -38,3 +38,23 @@ EDS.registerComponent('home-grid-actions', {
     table.replaceWith(container);
   }
 });
+*/
+export default function decorate(block) {
+  const cols = [...block.firstElementChild.children];
+  block.classList.add(`home-grid-actions`);
+  const ul = document.createElement('ul');
+  ul.classList.add('type-links');
+
+
+  // setup image columns
+  [...block.children].forEach((row) => {
+    const li = document.createElement('li');
+    li.appendChild("text")
+    ul.appendChild(li)
+  });
+
+  const container = document.createElement('div');
+  container.classList.add('home-grid-actions');
+  container.appendChild(ul);
+
+}
