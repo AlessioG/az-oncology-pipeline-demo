@@ -46,12 +46,14 @@ export default function decorate(block) {
 
 
   const ul = document.createElement('ul').classList.add('type-links');
-
-  // setup image columns
- 
-    const item = document.createElement('li');
-    const text = document.createTextNode('list item content');
-    item.appendChild(text);
+  const item = document.createElement('li');
+  const link = document.createElement('a');
+  const strong = document.createElement('strong');
+  const em = document.createElement('em');
+  const span = document.createElement('span');
+  const text = 'Esempio';
     ul.appendChild(item);
     block.appendChild(ul);
+
+
 }
