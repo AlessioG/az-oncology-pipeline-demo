@@ -39,22 +39,48 @@
   }
 });
 */
+
 export default function decorate(block) {
   const cols = [...block.firstElementChild.children];
-  block.classList.add(`home-grid-actions`);
-  const ul = document.createElement('ul');
-  ul.classList.add('type-links');
-
+  block.classList.add('home-grid-actions');
 
   // setup image columns
   [...block.children].forEach((row) => {
-    const li = document.createElement('li');
-    li.appendChild("text")
-    ul.appendChild(li)
+
+    const ul = document.createElement('ul');
+    ul.classList.add('type-links');
+
+
+    [...row.children].forEach((col) => {
+      const li = document.createElement('li');
+      li.appendChild("text");
+    });
+
+    container.appendChild(ul);
+
+
   });
-
-  const container = document.createElement('div');
-  container.classList.add('home-grid-actions');
-  container.appendChild(ul);
-
 }
+
+/*
+
+export default function decorate(block) {
+  const cols = [...block.firstElementChild.children];
+  block.classList.add(`columns-${cols.length}-cols`);
+
+  // setup image columns
+  [...block.children].forEach((row) => {
+    [...row.children].forEach((col) => {
+      const pic = col.querySelector('picture');
+      if (pic) {
+        const picWrapper = pic.closest('div');
+        if (picWrapper && picWrapper.children.length === 1) {
+          // picture is only content in column
+          picWrapper.classList.add('columns-img-col');
+        }
+      }
+    });
+  });
+}
+
+*/
